@@ -38,6 +38,8 @@ SELECT COUNT(*) AS NumberOfCustomers
 FROM Customers
 WHERE Country = 'Germany';
 
+*please refer to this file answersql.sql if error occured. Copy the script from that file and then running again.
+
 **Level 2 (Business Admin \- Expected Task Time \<4 minutes):**
 
 Write a query that shows me a list of the countries that have the most customers; from most customers to least customers.  Don’t show countries that have less than 5 customers.
@@ -50,6 +52,8 @@ FROM Customers
 GROUP BY Country
 HAVING COUNT(*) >= 5
 ORDER BY COUNT(*) DESC;
+
+*please refer to this file answersql.sql if error occured. Copy the script from that file and then running again.
 
 **Level 3 (Average Developer \- Expected Task Time \<8 minutes):**
 
@@ -74,6 +78,8 @@ HAVING
     COUNT(Orders.OrderID) >= 5
 ORDER BY 
     MAX(Orders.OrderDate) DESC;
+
+*please refer to this file answersql.sql if error occured. Copy the script from that file and then running again.
 
 # JavaScript/TypeScript Questions
 
@@ -104,6 +110,8 @@ Or
 | :---- |
 
 
+*please refer to this file answerjslvl1.js if error occured. Copy the script from that file and then running again.
+
 **Level 2:  Expected Task Time 1 minute.**
 
 Fix this code, using promises:
@@ -116,6 +124,8 @@ Fix this code, using promises:
 | function delay(e){return new Promise((n=>setTimeout(n,e)))}delay(3e3).then((()=>alert("runs after 3 seconds"))); |
 | :---- |
 
+*please refer to this file answerjslvl2.js if error occured. Copy the script from that file and then running again.
+
 **Level 2.5: Rewrite using Async/Await:**
 
 | function fetchData(*url*, *callback*) {   setTimeout(() \=\> {     if (\!url) {       callback("URL is required", null);     } else {       callback(null, \`Data from ${url}\`);     }   }, 1000); } function processData(*data*, *callback*) {   setTimeout(() \=\> {     if (\!data) {       callback("Data is required", null);     } else {       callback(null, data.toUpperCase());     }   }, 1000); } *// Using callbacks* fetchData("https://example.com", (*err*, *data*) \=\> {   if (err) {     console.error("Fetch Error:", err);   } else {     processData(data, (*err*, *processedData*) \=\> {       if (err) {         console.error("Process Error:", err);       } else {         console.log("Processed Data:", processedData);       }     });   } });  |
@@ -126,6 +136,7 @@ Fix this code, using promises:
 | function fetchData(e){return new Promise(((t,r)=>{setTimeout((()=>{e?t(`Data from ${e}`):r("URL is required")}),1e3)}))}function processData(e){return new Promise(((t,r)=>{setTimeout((()=>{e?t(e.toUpperCase()):r("Data is required")}),1e3)}))}async function run(){try{const e=await fetchData("https://example.com"),t=await processData(e);console.log("Processed Data:",t)}catch(e){console.error("Error:",e)}}run();  |
 | :---- |
 
+*please refer to this file answerjslvl25.js if error occured. Copy the script from that file and then running again.
 
 **Level 3-4: Expected Task Time Less Than 1 Hour.**
 
@@ -142,19 +153,19 @@ See example below:
 **Answer:**
 
 * Please clone from this repository https://github.com/balski/realtimechatapp.git
-* Open vs code
+* Open vscode
 * Make sure you have installed live server extension on vscode
-* Open folder source/workspace
+* Open folder/workspace of source
 * On menubar, select terminal --> New Terminal
 * Type command in terminal: node server.js, enter
 * Make sure this message appear: WebSocket server running at ws://localhost:8000
-* Select index.html on vs code, right click, open with live server
+* Select index.html on vscode file explorer on the left screen, right click, open with live server
 * The chat window appear in web browser
-* Duplicate the tab by copy the url to a new tab
+* Duplicate the tab by copy the same url to a new tab
 * Try chat on first tab, and then click send
-* And then switch to second tab, the chat from first tab will appear on second tab
+* And then switch to second tab, the chat from the first tab will appear on second tab
 * Try to chat on second tab and then click send
-* And then switch to first tab again, the chat from second tab will appear on first tab
+* And then switch to first tab again, the chat from the second tab will appear on first tab
 
 # Vue.js
 
@@ -213,9 +224,9 @@ Tell me all the security best practices you can think of \- start with the most 
 - Escape all output = Sanitize output before injecting into the DOM.
 - Always use HTTPS = Redirect HTTP to HTTPS automatically.
 - Implement authentication = Use OAuth 2.0, JWT authentication. And always enforce use strong password policies for users.
-- Secure Authentication Tokens = Store JWTs in HTTP-only, secure cookies, not localStorage.
-- Keep Dependencies Updated = Regularly update NPM/Yarn packages and frameworks.
-- Avoid Sensitive Info in Source Code = Never commit secrets (API keys, DB passwords) to Git. Use secret managers (like AWS Secrets Manager or Azure Key Vault).
+- Secure authentication tokens = Store JWTs in HTTP-only, secure cookies, not localStorage.
+- Keep dependencies updated = Regularly update NPM/Yarn packages and frameworks.
+- Avoid sensitive info in Source Code = Never commit secrets (API keys, DB passwords) to Git. Use secret managers (like AWS Secrets Manager or Azure Key Vault).
 
 
 # Website Performance Best Practises
@@ -246,6 +257,8 @@ Create a function that counts the word frequency in this string "Four, One two t
 
 | using System;using System.Collections.Generic;using System.Text.RegularExpressions;public class Program {public static void Main() {string input = "Four, One two two three Three three four  four   four";var result = WordFrequency(input);foreach(var listWord in result) {Console.WriteLine($ "{listWord.Key} => {listWord.Value}");}}static Dictionary < string, int > WordFrequency(string input) {string cleaned = Regex.Replace(input.ToLower(), @ "[^\w\s]", "");string[] words = cleaned.Split(new [] {' ','\t','\n','\r'}, StringSplitOptions.RemoveEmptyEntries);var frequency = new Dictionary < string,int > ();foreach(var word in words) {if (frequency.ContainsKey(word))frequency[word]++;elsefrequency[word] = 1;}return frequency;}}  |
 | :---- |
+
+*please refer to this file answernetcode.cs if error occured. Copy the script from that file and then running again.
 
 # Tools (Rate yourself 1 to 5\)
 
